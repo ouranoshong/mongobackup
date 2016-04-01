@@ -2,12 +2,16 @@
 
 VAR_FILE=$(dirname $0)/vars.sh
 
-if [ ! -f $VAR_FILE ]; then
+if [ ! -f "$VAR_FILE" ]; then
 	VAR_FILE=$(pwd)/$VAR_FILE
 fi
 
 source $VAR_FILE
 
-/usr/local/bin/mongo-oplog-backup merge --dir $DATA_DIR 2>&1 >> $WORK_DIR/restore.log
+if [ -d "$DATA_DIR" ]; then
+	echo "/usr/local/bin/mongo-oplog-backup merge --dir $DATA_DIR"
+fi
 
-/usr/bin/mongorestore --host $DB_HOST --drop --oplogReplay $DATA_DIR/dump
+if [ -d "$DATA_DIR" ]; then
+	echo "/usr/bin/mongorestore --host $HOST_DES --drop --oplogReplay $DATA_DIR/dump"
+fi
