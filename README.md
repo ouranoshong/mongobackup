@@ -39,4 +39,5 @@ Change configure in `vars.sh` file
 
 * `HOST_SRC` host of backup db
 * `HOST_DES` host of restore db
+* `WORK_DIR` directory for program to work on
 * `BACKUP_DIR` directory to store backup file
