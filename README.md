@@ -11,19 +11,19 @@ mongobackup shell scripts file
 
 ### SetUp
 
-Install ruby envirment
+Install ruby environment
 ```bash
 apt-get install -y ruby ruby-dev build-essential
 ```
 
-Install `mongo-oplog-backup` program
+Install `mongo-oplog-backup`
 ```bash
 gem install mongo-oplog-backup
 ```
 
 ### Backup
 
-First full backup script should be run
+First fun full backup script
 ```bash
 /path/to/dumpofull.sh
 ```
