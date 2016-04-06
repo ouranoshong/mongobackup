@@ -33,11 +33,11 @@ Then set crontab for mongodb incremental backup
 */10 * * * * /path/to/dumpoplog.sh 2>&1 >> /path/to/file
 ```
 
-### configure
+### Configure
 
-Change configure in `vars.sh` file
+Change configures in `vars.sh` file
 
 * `HOST_SRC` host of backup db
 * `HOST_DES` host of restore db
-* `WORK_DIR` directory for program to work on
+* `WORK_DIR` program working direcory
 * `BACKUP_DIR` directory to store backup file
