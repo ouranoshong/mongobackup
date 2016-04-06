@@ -1,12 +1,6 @@
 #!/bin/bash
 
-VAR_FILE=$(dirname $0)/vars.sh
-
-if [ ! -f "$VAR_FILE" ]; then
-	VAR_FILE=$(pwd)/$VAR_FILE
-fi
-
-source $VAR_FILE
+source $(cd "$(dirname $0)"; pwd)/vars.sh
 
 if [ -d "$DATA_DIR" ]; then
 	echo "/usr/local/bin/mongo-oplog-backup merge --dir $DATA_DIR"
