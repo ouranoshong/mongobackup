@@ -1,6 +1,6 @@
 #!/bin/bash
 
-$VAR_FILE=$(cd "$(dirname $0)"; pwd)/vars.sh
+VAR_FILE=$(cd "$(dirname $0)"; pwd)/vars.sh
 
 source $VAR_FILE
 
